@@ -1,0 +1,31 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/restapi.js",
+  "scripts": {
+    "test": "mocha -w",
+    "start": "node src/restapi.js",
+    "cluster": "node src/master.server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.27",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  }
+}

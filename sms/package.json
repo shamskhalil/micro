@@ -1,0 +1,26 @@
+{
+  "name": "sms-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/restapi.js",
+  "scripts": {
+    "test": "mocha -w",
+    "start": "node src/restapi.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
+    "mongoose": "^5.9.27",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  }
+}
