@@ -5,5 +5,10 @@ module.exports = {
         username: 'lexUser',
         password: 'lexPass',
         database: 'lexclassdb'
+    },
+    redisDb: {
+        host: 'localhost',
+        port: 6379,
+        db: 0
     }
 }

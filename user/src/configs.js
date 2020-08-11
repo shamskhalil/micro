@@ -12,5 +12,10 @@ module.exports = {
     },
     smsService: {
         sendUri: 'http://localhost:3001/api/v1/sms'
+    },
+    redisDb: {
+        host: 'localhost',
+        port: 6379,
+        db: 0
     }
 }
