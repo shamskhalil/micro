@@ -92,10 +92,10 @@ module.exports = () => {
         try {
             const savedUser = await UserDao.addNew(req.body);
             //send user an sms confirming his registration
-            const text = `Welcome to LexClass APP, ${savedUser.fullName}! You may proceed to Login.`
-            const smsresponse = await SmsServiceDao.sendSms(text, "07068699808", "LexClass");
-            const payload = { user: savedUser, smsSent: smsresponse };
-            res.status(200).json({ status: 'success', payload, message: 'User created successfully!' });
+            //const text = `Welcome to LexClass APP, ${savedUser.fullName}! You may proceed to Login.`
+            //const smsresponse = await SmsServiceDao.sendSms(text, "07068699808", "LexClass");
+            //const payload = { user: savedUser, smsSent: smsresponse };
+            res.status(200).json({ status: 'success', payload: savedUser, message: 'User created successfully!' });
         } catch (err) {
             res.status(500).json({ status: 'failed', payload: null, message: err });
         }

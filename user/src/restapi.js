@@ -15,25 +15,6 @@ app.use(cors());
 app.use(helmet());
 
 
-client.keys('users:*', (err, listOfAllUser) => {
-    if (err) {
-        console.log('REDIS ERR >> ', err);
-    } else {
-        let k;
-        let multi = client.multi();
-        listOfAllUser.forEach((key) => {
-            k = key;
-            multi.get(key);
-        });
-        multi.zrevrange('gamescore', 0, -1, 'withscores');
-        multi.lrange('que', 0, -1);
-        multi.exec((err, val) => {
-            //console.log('key > ', k, '  val > ', val);
-            console.log("Scores : >>> ", val[2]);
-        });
-    }
-})
-
 
 
 
